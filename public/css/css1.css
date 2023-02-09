@@ -1,0 +1,185 @@
+/*#region CustomFont*/
+
+@font-face
+{
+    font-family: 'MetalGear';
+    src: url(/fonts/METAG.TTF);
+}
+
+/*#endregion*/
+
+/*#region General*/
+body
+{
+    background-color: rgb( 13, 4, 22);
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+    color: white;
+    background-image: url("test3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    background-color: orange;
+    text-align: center;
+    color: whitesmoke;
+    border-style: groove;
+    border-color: black;
+    margin: auto;
+    font-family: 'Koulen', cursive;
+}
+h2{
+    color: whitesmoke;
+    border-style: groove;
+    margin: auto;
+    font-family: 'Koulen', cursive;
+    font-size: 18px;
+
+}
+div{
+    margin: 20px;
+    scroll-behavior: smooth;
+
+}
+nav
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2pc;
+    margin: 1rem;
+}
+a{
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    border: 4px groove orangered;
+    background-color: aqua;
+    text-align: center;
+}
+aside{
+    border: 2px solid orangered;
+    margin: 30px;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(31, 0, 61, 0.781);
+}
+/*#endregion*/
+
+/*#region Custom Boxes*/
+#line{
+    margin:0;
+    margin-top: 1rem;
+    display: grid;
+    align-self: center;
+    background-color: #f76500;
+    height: 1px;
+    width: 80%;
+    translate: 10%;
+}
+#main-nav
+{
+    display: grid;
+    grid-template-columns: 2fr 50% 1fr 1fr ;
+    gap: 4vm;
+}
+#title
+{
+    background:none;
+    font-family: 'MetalGear' , sans-serif;
+    grid-column-start: 2;
+
+}
+/*#endregion*/
+
+
+/*#region Scrollbar*/
+/* propiedades de la scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  /* el fondo */
+  ::-webkit-scrollbar-track {
+    background: #424242;
+  }
+  /* la barra */
+  ::-webkit-scrollbar-thumb {
+    background: #f76500;
+  }
+  /* mouse sobre barra*/
+  ::-webkit-scrollbar-thumb:hover {
+    background: #db5b00;
+  }
+
+/*#endregion*/
+
+/*#region V-Container*/
+
+.v-contenedor
+{
+    display: grid;
+    padding: 1em;
+    border: 2px groove #f76500;
+    width: auto;
+    grid-template-columns:  minmax(1rem, 1fr) repeat(auto-fit, minmax(0rem, 3fr));
+    scroll-behavior: smooth;
+    background-color: rgba(32, 6, 60, 0.4);
+}
+@media (max-width:38em) {
+    .v-contenedor{
+        grid-template-columns: repeat(auto-fit, minmax(20rem,  3fr));
+    }
+
+}
+.v-name
+{
+    background: none;
+    justify-self: start;
+}
+.image
+{
+    justify-self: center;
+    width: clamp(8rem, 100%, 17rem);
+    height: clamp(12rem, 100%, 24rem);
+
+}
+/*#region Collapsible Clip*/
+.collapsible {
+    background-color: rgb(50, 50, 50);
+    color: #e6ee;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: rgb(70, 70, 70);
+}
+.content {
+    justify-content: center;
+    display: none;
+    overflow: hidden;
+    margin: 10px;
+}
+.v-video
+{
+    border: 2px groove orangered;
+    width: clamp(21rem , 100%,  28rem);
+    aspect-ratio: 7/4;
+}
+/*#endregion*/
+/*#endregion*/
+
+
+
+
+
+
+
+
+
