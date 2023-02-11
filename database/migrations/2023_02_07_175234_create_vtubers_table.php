@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
+        //esta funcion crea la tabla vtubers con las columnas que yo decida
+        //php artisan make:migration create_nombre_table **nombre sugerido
         Schema::create('vtubers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('nickname');
+            $table->string('fanname');
             $table->string('company');
             $table->string('image');//dsp lo arreglo
             $table->string('clip');

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Vtuber;
+use App\Http\Controllers\VtuberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/character', function () {
-    return view('character');
-});
+
+//dado que estoy usando controlador, en vez de escribir los datos aca llamo a las clases del controlador
+Route::get('/', [VtuberController::class, 'index']);
+
+Route::get('/character', [VtuberController::class, 'displayCharacter']);
 ///character/{query}

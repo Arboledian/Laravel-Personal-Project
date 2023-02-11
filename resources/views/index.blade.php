@@ -9,8 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-        <link rel="shortcut icon" href="/images/logo.png">
         <!-- Styles -->
+        <link rel="shortcut icon" href="/images/logo.png">
         <link  rel="stylesheet" href="/css/css1.css" />
         <style>
 
@@ -22,109 +22,71 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+        {{-- esta es una forma para hacer comentarios en laravel, no estoy seguro si es cosa de .blade o php--}}
+        {{-- llamada del js --}}
+        <!-- esta es la forma normal de hacer comentarios en html-->
         <script defer src="/js/indexstyle.js"></script>
+
     </head>
 
     <body>
-        <!-- sesion + nombre pag -->
+        {{-- sesion --}}
          <nav id=main-nav>
             <h1 id=title> AYUDA POR FAVOR   </h1>
             <button> Botón épico 1 </button>
             <button> Botón épico 2 </button>
          </nav>
 
-         <!-- navegacion -->
-
-
+         {{-- literalmente una linea --}}
          <div id=line class="relative flex items-top justify-center "></div>
 
+         {{-- navegacion --}}
          <nav>
             <a>INICIO </a>
             <a>DESARROLLO</a>
             <a>FINAL</a>
          </nav>
-
+         {{-- info de la pagina --}}
         <aside >
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
         </aside>
 
+        {{-- una lina otra vez --}}
         <div id=line class="relative flex items-top justify-center "></div>
+
+        {{-- funcion @unless de laravel, es como un if else, en este caso busca si existen datos en el array
+            /variable vtubers, si hay datos prosigue y en caso de que no devuelve un lo que este en el else, --}}
+        @unless (count($vtubers)==0)
+
+        {{-- foreach es la tipica funcion para buscar datos en un array --}}
+        @foreach ($vtubers as $vtuber )
+
+        {{-- el siguiente section correspone al como se muestra y que info se muestra
+            es posible separar esto en un componente aparte, en caso de que la pagina
+            sea muy grande es bueno tenerlo en consideracion aunque no es el caso --}}
         <section>
             <div class="v-contenedor">
-                <img class="image" src="/images/ena1.jpg">
+                <img class="image" src="/images/{{ $vtuber->image }}.jpg">
             <div class="v-content">
-                <h1 class="v-name"> Enna</h1>
+                <h1 class="v-name"> {{ $vtuber -> name }}</h1>
                 <div class="v-info">
-                    <h2 class="v-nickname">Nicknames: Birb | Bitch | Bestie</h2>
-                    <h2 class="v-fanname">Fanname: Aloupeeps </h2>
-                    <h2 class="v-gen">Generation: NijisanjiEN Ethyria </h2>
+                    <h2 class="v-nickname">Nicknames: {{ $vtuber -> nickname }}</h2>
+                    <h2 class="v-fanname">Fanname: {{  $vtuber->fanname }} </h2>
+                    <h2 class="v-gen">Generation: {{ $vtuber->company }} </h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
                 <button type="button" class="collapsible">Recommended Clip</button>
                 <div class="content">
-                    <iframe class="v-video" src="https://www.youtube.com/embed/m4K36aRFMOg" title="YouTube clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="v-video" src="{{ $vtuber -> clip }}" title="YouTube clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class=v-contenedor>
-            <!-- por como esta creado el elemento es mejor dejar la imagen al final -->
-            <img class="image" src="/images/mumei1.jpg">
-            <div>
-                <h1 class="v-name"> Mumei</h1>
-                <div class="v-info">
-                    <h2 class="v-nickname">Nicknames: Meimei | Moom  </h2>
-                    <h2 class="v-fanname">Fanname: Hoomans </h2>
-                    <h2 class="v-gen">Generation: HololiveEN Council </h2>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
-                <button type="button" class="collapsible">Recommended Clip</button>
-                <div class="content">
-                    <iframe class="v-video" src="https://www.youtube.com/embed/Q8A_GFiNs1U" title="YouTube clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class=v-contenedor>
-            <img class="image" src="/images/selen1.jpg">
-            <div>
-                <h1 class="v-name"> Selen</h1>
-                <div class="v-info">
-                    <h2 class="v-nickname">Nicknames: Toxic Dragon </h2>
-                    <h2 class="v-fanname">Fanname: Dragoons </h2>
-                    <h2 class="v-gen">Generation: NijisanjiEN Obsydia </h2>
-                </div>
+    @endforeach
+    @else
+    <h1> No data to show</h1>
+    @endunless
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
-                <button type="button" class="collapsible">Recommended Clip</button>
-                <div class="content">
-                    <iframe class="v-video" src="https://www.youtube.com/embed/SJo8NPGW02g" title="YouTube clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class='v-contenedor'>
-            <img class="image" src="/images/suisei1.jpg">
-            <!-- por como esta creado el elemento es mejor dejar la imagen al final -->
-            <div>
-                <h1 class="v-name"> Suisei</h1>
-                <div class="v-info">
-                    <h2 class="v-nickname">Nicknames: Sui-chan | Suicopath  </h2>
-                    <h2 class="v-fanname">Fanname: Hoshiyomis </h2>
-                    <h2 class="v-gen">Generation: Hololive gen 0 </h2>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
-                <button type="button" class="collapsible">Recommended Clip</button>
-                <div class="content">
-                    <iframe class="v-video" src="https://www.youtube.com/embed/lD8oL4CRu64"  title="YouTube clip" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-    </body>
+</body>
 </html>

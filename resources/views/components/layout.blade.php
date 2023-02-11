@@ -47,5 +47,8 @@
         <aside >
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tortor at auctor urna nunc. Dui accumsan sit amet nulla facilisi morbi tempus iaculis. Tristique senectus et netus et. Integer enim neque volutpat ac tincidunt vitae semper. </p>
         </aside>
+
+        {{-- View Output --}}
+        {{$slot }}
     </body>
 </html>
