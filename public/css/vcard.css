@@ -1,0 +1,65 @@
+/*#region V-Container*/
+.v-contenedor
+{
+    display: grid;
+    padding: 1em;
+    border: 2px groove #f76500;
+    width: auto;
+    grid-template-columns:  minmax(1rem, 1fr) repeat(auto-fit, minmax(0rem, 3fr));
+    scroll-behavior: smooth;
+    background-color: rgba(32, 6, 60, 0.4);
+}
+.v-name
+{
+    background: none;
+    justify-self: start;
+}
+.image
+{
+    justify-self: center;
+    width: clamp(8rem, 100%, 17rem);
+    height: clamp(12rem, 100%, 24rem);
+
+}
+/*#region Collapsible Clip*/
+.collapsible {
+    margin-top: 1rem;
+    background-color: rgb(50, 50, 50);
+    color: #e6ee;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 15px;
+    height: 3rem;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: rgb(70, 70, 70);
+}
+.content {
+    justify-content: center;
+    display: none;
+    overflow: hidden;
+    margin: 10px;
+}
+.v-video
+{
+    border: 2px groove orangered;
+    width: clamp(21rem , 100%,  28rem);
+    aspect-ratio: 7/4;
+}
+@media only screen and (max-width: 900px)
+{
+    .v-contenedor{
+        grid-template-columns: repeat(auto-fit, minmax(20rem,  3fr));
+    }
+    .collapsible{
+        text-align: center;
+        padding-left: 0px;
+    }
+
+}
+/*#endregion*/
+/*#endregion*/

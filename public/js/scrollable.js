@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries) =>{
         }
         else
         {
-            entry.target.classList.show('show');
+            entry.target.classList.remove('show');
         }
     });
 });

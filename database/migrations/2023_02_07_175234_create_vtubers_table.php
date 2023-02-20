@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('nickname');
             $table->string('fanname');
+            $table->string('oshimark');
             $table->string('company');
             $table->string('image');//dsp lo arreglo
             $table->string('clip');

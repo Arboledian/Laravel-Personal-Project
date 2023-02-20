@@ -23,7 +23,6 @@ body
     background-attachment: fixed;
 }
 h1{
-    background-color: orange;
     text-align: center;
     color: whitesmoke;
     border-style: groove;
@@ -81,7 +80,7 @@ aside{
 #main-nav
 {
     display: grid;
-    grid-template-columns: 2fr 50% 1fr 1fr ;
+    grid-template-columns: 6fr 40% 6fr ;
     gap: 4vm;
 }
 #title
@@ -89,6 +88,7 @@ aside{
     background:none;
     font-family: 'MetalGear' , sans-serif;
     grid-column-start: 2;
+    font-size: 2rem;
 
 }
 .space
@@ -105,6 +105,12 @@ aside{
 .show
 {
     opacity: 1;
+}
+@media (prefers-reduced-motion) {
+    .hiddeable{
+        transition: none;
+    }
+
 }
 
 /*#endregion*/
@@ -129,66 +135,22 @@ aside{
 
 /*#endregion*/
 
-/*#region V-Container*/
-
-.v-contenedor
-{
-    display: grid;
-    padding: 1em;
-    border: 2px groove #f76500;
-    width: auto;
-    grid-template-columns:  minmax(1rem, 1fr) repeat(auto-fit, minmax(0rem, 3fr));
-    scroll-behavior: smooth;
-    background-color: rgba(32, 6, 60, 0.4);
-}
-@media only screen and (max-width: 768px)
-{
-    .v-contenedor{
-        grid-template-columns: repeat(auto-fit, minmax(20rem,  3fr));
+@media only screen and (max-width: 900px){
+    #main-nav{
+        display: grid;
+        padding: 1em;
+        gap: 0;
+        justify-content: center;
+        grid-template-columns: 20rem;
+        grid-template-rows: 2;
+    }
+    #title{
+        grid-column-start: 1;
     }
 
 }
-.v-name
-{
-    background: none;
-    justify-self: start;
-}
-.image
-{
-    justify-self: center;
-    width: clamp(8rem, 100%, 17rem);
-    height: clamp(12rem, 100%, 24rem);
 
-}
-/*#region Collapsible Clip*/
-.collapsible {
-    background-color: rgb(50, 50, 50);
-    color: #e6ee;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-}
-.active, .collapsible:hover {
-    background-color: rgb(70, 70, 70);
-}
-.content {
-    justify-content: center;
-    display: none;
-    overflow: hidden;
-    margin: 10px;
-}
-.v-video
-{
-    border: 2px groove orangered;
-    width: clamp(21rem , 100%,  28rem);
-    aspect-ratio: 7/4;
-}
-/*#endregion*/
-/*#endregion*/
+
 
 
 
