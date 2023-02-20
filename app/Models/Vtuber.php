@@ -11,6 +11,18 @@ class Vtuber extends Model
     use HasFactory;
 
     public function queryFilter($query, array $filters){
+        if($filters['company'] ?? false){
+            //comando con formato SQL
+            $query->where('company', 'like','%' . request('company') . '%');
+        }
+
+        if($filters['search'] ?? false){
+            //comando con formato SQL
+            $query->where('company', 'like','%' . request('company') . '%')
+            ->orWhere('name', 'like','%' . request('name') . '%');
+        }
+
+
 
     }
 }

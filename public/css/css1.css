@@ -42,7 +42,6 @@ h2{
 div{
     margin: 20px;
     scroll-behavior: smooth;
-
 }
 nav
 {
@@ -69,7 +68,7 @@ aside{
 /*#endregion*/
 
 /*#region Custom Boxes*/
-#line{
+.line{
     margin:0;
     margin-top: 1rem;
     display: grid;
@@ -92,8 +91,23 @@ aside{
     grid-column-start: 2;
 
 }
+.space
+{
+    margin-bottom: 5rem;
+}
 /*#endregion*/
+/*#region Scroll Anim*/
+.hiddeable
+{
+    opacity: 0;
+    transition: all 800ms;
+}
+.show
+{
+    opacity: 1;
+}
 
+/*#endregion*/
 
 /*#region Scrollbar*/
 /* propiedades de la scrollbar */
@@ -127,7 +141,8 @@ aside{
     scroll-behavior: smooth;
     background-color: rgba(32, 6, 60, 0.4);
 }
-@media (max-width:38em) {
+@media only screen and (max-width: 768px)
+{
     .v-contenedor{
         grid-template-columns: repeat(auto-fit, minmax(20rem,  3fr));
     }
