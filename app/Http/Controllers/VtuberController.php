@@ -23,6 +23,9 @@ class VtuberController extends Controller
 
     public function displayCharacter()
     {
-        return view('character');
+        return view('character',[
+            'vtubers' => Vtuber::latest()->get()
+        ]);
+
     }
 }

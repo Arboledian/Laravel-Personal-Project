@@ -51,10 +51,9 @@ nav
 }
 a{
     margin: auto;
-    width: fit-content;
+    width: 50%;
     height: fit-content;
-    border: 4px groove orangered;
-    background-color: aqua;
+    border-radius: 10px;
     text-align: center;
 }
 aside{
@@ -77,7 +76,7 @@ aside{
     width: 80%;
     translate: 10%;
 }
-#main-nav
+#header-nav
 {
     display: grid;
     grid-template-columns: 6fr 40% 6fr ;
@@ -89,6 +88,14 @@ aside{
     font-family: 'MetalGear' , sans-serif;
     grid-column-start: 2;
     font-size: 2rem;
+
+}
+.main-nav{
+    border-radius: 5px;
+    background-color: rgb(160, 5, 5 );
+    border: 1px groove red;
+    margin-inline: 5rem;
+    z-index: 0;
 
 }
 .space
@@ -136,7 +143,7 @@ aside{
 /*#endregion*/
 
 @media only screen and (max-width: 900px){
-    #main-nav{
+    #header-nav{
         display: grid;
         padding: 1em;
         gap: 0;

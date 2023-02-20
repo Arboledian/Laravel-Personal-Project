@@ -1,8 +1,10 @@
+<link rel="stylesheet" href="/css/sesion.css"/>
 <x-layout>
     <title>Laravel </title>
 
+    <div class="login">
   {{-- Header Texto --}}
-  <header class="text-center">
+  <header class="text-center border border-gray-200 rounded mt-10 bg-orange-700">
         <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
         <p class="mb-4">Create an account to have an account!</p>
       </header>
@@ -69,7 +71,7 @@
           </p>
         </div>
       </form>
-
+    </div>
     {{--
         --}}
 </x-layout>

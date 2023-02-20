@@ -32,7 +32,7 @@
     <body>
         {{-- sesion --}}
 
-         <nav id=main-nav>
+         <nav id="header-nav">
             <h1 id=title> AYUDA POR FAVOR </h1>
             <div class="grid grid-cols-2">
                 <button> Botón épico 1 </button>
@@ -48,10 +48,10 @@
 
          {{-- navegacion --}}
 
-         <nav>
-            <a>INICIO </a>
-            <a>DESARROLLO</a>
-            <a>FINAL</a>
+         <nav class="main-nav">
+            <a class=" hover:bg-black">INICIO </a>
+            <a class=" hover:bg-black">DESARROLLO</a>
+            <a class=" hover:bg-black">FINAL</a>
          </nav>
 
         {{-- View Output --}}

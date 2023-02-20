@@ -1,0 +1,7 @@
+.login{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border: 4px groove orangered;
+    margin-inline: 12rem;
+}
