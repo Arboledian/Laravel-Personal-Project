@@ -42,9 +42,9 @@
     <!-- navegacion -->
 
     <nav class="main-nav">
-        <a class=" hover:bg-black">INICIO </a>
-        <a class=" hover:bg-black">DESARROLLO</a>
-        <a class=" hover:bg-black">FINAL</a>
+        <a>INICIO </a>
+        <a>DESARROLLO</a>
+        <a>FINAL</a>
     </nav>
 
     {{-- View Output --}}

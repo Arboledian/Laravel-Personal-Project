@@ -56,6 +56,9 @@ a{
     border-radius: 10px;
     text-align: center;
 }
+a:hover{
+    background-color: rgba(45, 45, 55, 0.7);
+}
 aside{
     border: 2px solid orangered;
     margin: 30px;
