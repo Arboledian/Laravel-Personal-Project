@@ -13,17 +13,6 @@ const observer = new IntersectionObserver((entries) =>{
 const hiddenElements = document.querySelectorAll('.hiddeable');
 hiddenElements.forEach((el) => observer.observe(el));
 
-/*
-const boxes = document.querySelectorAll(".box");
-const checkBoxes = () => {
-    const triggerBottom = (window.innerHeight / 5) *4;
-    boxes.forEach((box) =>{
-        const boxTop = box.getBoundingClientRect().top;
-        if (boxTop < triggerBottom) box.classList.add("show");
-        else box.classList.remove("show");
-    });
-};
 
-window.addEventListener("show",checkBoxes);
-checkBoxes();*/
+
 

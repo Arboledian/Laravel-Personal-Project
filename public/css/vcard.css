@@ -13,6 +13,8 @@
 {
     background: none;
     justify-self: start;
+    text-align: start;
+    margin-inline: 20px;
 }
 .image
 {
@@ -58,6 +60,16 @@
     .collapsible{
         text-align: center;
         padding-left: 0px;
+    }
+    .v-info{
+        display: grid;
+        justify-content: center;
+    }
+    h2{
+        text-align: center;
+    }
+    .v-name{
+        text-align: center;
     }
 
 }

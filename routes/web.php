@@ -28,9 +28,14 @@ Route::get('/character', [VtuberController::class, 'displayCharacter']);
 
 Route::get('/register', [UserController::class, 'register'])->middleware('guest');
 
- #region copiadoypegado
-// Create New User
+
+/* Create New User
+en la vista registro se usa un metodo POST que redirige a /user, por lo tanto se crea esta ruta
+y se usa la clase store en el controlador*/
+
 Route::post('/users', [UserController::class, 'store']);
+
+ #region copiadoypegado
 
 // Log User Out
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
