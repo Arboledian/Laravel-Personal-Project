@@ -24,7 +24,7 @@ Route::get('/', function () {
 //dado que estoy usando controlador, en vez de escribir los datos aca llamo a las clases del controlador
 Route::get('/', [VtuberController::class, 'index']);
 
-Route::get('/character', [VtuberController::class, 'displayCharacter']);
+Route::get('/character/{vtuber}', [VtuberController::class, 'displayCharacter']);
 
 //middleware es una directiva de requerimiento, guest requiere que una sesion de invitado para poder acceder
 //mientras que auth requiere una sesion de usuario válida para ingresar

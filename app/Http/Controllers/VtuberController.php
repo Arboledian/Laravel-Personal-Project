@@ -8,23 +8,25 @@ use Illuminate\Http\Request;
 class VtuberController extends Controller
 {
     //
+    //use dd(request()); for debuging
     public function index()
     {
+//        dd(request());
         return view('index', [
             //all() devuelve todo la informacion que encuentre
             //latest()->get() devuelve la informacion sorteada por mas reciente, en resumen es casi lo mismo
             //'vtubers' => Vtuber::all()
             //filter es para agregar un filtro a la busqueda
             //'vtubers' => Vtuber::latest()->filter(request(''))->get()
-            'vtubers' => Vtuber::latest()->get()
-
-        ]);
+//            'vtubers' => Vtuber::latest()->get()
+            'vtubers' => Vtuber::latest()->filter(request(['company', 'search']))->get()
+         ]);
     }
 
-    public function displayCharacter()
+    public function displayCharacter(Vtuber $vtuber)
     {
         return view('character',[
-            'vtubers' => Vtuber::latest()->get()
+            'vtuber' => $vtuber
         ]);
 
     }

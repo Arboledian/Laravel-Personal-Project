@@ -10,12 +10,7 @@ class Vtuber extends Model
     //creado con php artisan make:model Vtuber
     use HasFactory;
 
-    public function queryFilter($query, array $filters){
-        if($filters['company'] ?? false){
-            //comando con formato SQL
-            $query->where('company', 'like','%' . request('company') . '%');
-        }
-
+    public function scopeFilter($query, array $filters){
         if($filters['search'] ?? false){
             //comando con formato SQL
             $query->where('company', 'like','%' . request('company') . '%')
