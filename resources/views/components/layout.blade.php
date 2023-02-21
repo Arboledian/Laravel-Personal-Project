@@ -28,7 +28,7 @@
         <div class="grid grid-cols-2 m-0">
             <a href="/register" class="w-full">
                 <i class="fa-solid fa-user-plus"></i> Register </a>
-            <a href="/register" class="w-full">
+            <a href="/login" class="w-full">
                 <i class="fa-solid fa-arrow-right-to-bracket"></i> Login </a>
         </div>
     </nav>

@@ -5,3 +5,6 @@
     border: 4px groove orangered;
     margin-inline: 12rem;
 }
+input{
+    background-color: rgb(55, 55, 55);
+}
