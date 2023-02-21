@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    @include('/components.loadingscreen')
+    @include('/partials._loadingscreen')
     <!-- sesion -->
 
     <nav id="header-nav">
