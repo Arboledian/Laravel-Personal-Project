@@ -2,10 +2,18 @@
     display: grid;
     align-content: center;
     justify-content: center;
+    place-items: center;
     border: 4px groove orangered;
-    margin-inline: 12rem;
+    width: max-content;
+    margin: auto;
+    padding: auto;
+    background-color: rgba(13, 4, 22,0.9);
 }
 input{
     background-color: rgb(55, 55, 55);
 }
 
+@media only screen and (max-width: 900px){
+
+
+}
