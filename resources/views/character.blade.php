@@ -13,7 +13,7 @@
     @foreach ($vtubers as $vtuber )
     <section>
     <div class="v-contenedor hiddeable">
-        <img class="image" src="/images/{{ $vtuber->image }}.jpg">
+        <img class="image" draggable="false" src="/images/{{ $vtuber->image }}.jpg">
         <div class="v-content">
             <h1 class="v-name"> {{ $vtuber -> name }}</h1>
             <div class="v-info">

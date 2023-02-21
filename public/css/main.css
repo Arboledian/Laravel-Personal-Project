@@ -87,11 +87,11 @@ aside{
 }
 #title
 {
+    user-select: none;
     background:none;
     font-family: 'MetalGear' , sans-serif;
     grid-column-start: 2;
     font-size: 2rem;
-
 }
 .main-nav{
     border-radius: 5px;
