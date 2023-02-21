@@ -25,12 +25,25 @@
 
     <nav id="header-nav">
         <h1 id=title> AYUDA POR FAVOR </h1>
-        <div class="grid grid-cols-2 m-0">
-            <a href="/register" class="w-full">
-                <i class="fa-solid fa-user-plus"></i> Register </a>
-            <a href="/login" class="w-full">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i> Login </a>
-        </div>
+        @auth
+            <div class="grid grid-cols-2 m-0">
+                <a href="/register" class="w-full">
+                    <i class="fa-solid fa-user-plus mr-2"></i> Welcome, {{ auth()->user()->name }} </a>
+
+                <form method="POST" action="/logout" class="relative self-center">
+                    @csrf
+                    <button type="submit" class="w-full text-center" >
+                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Log-out </button>
+                </form>
+            </div>
+        @else
+            <div class="grid grid-cols-2 m-0">
+                <a href="/register" class="w-full">
+                    <i class="fa-solid fa-user-plus mr-2"></i> Register </a>
+                <a href="/login" class="w-full">
+                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Login </a>
+            </div>
+        @endauth
     </nav>
 
     <!-- navegacion -->

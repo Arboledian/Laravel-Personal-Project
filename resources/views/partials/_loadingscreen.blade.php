@@ -17,7 +17,7 @@
     window.addEventListener('load', function(load) {
         window.removeEventListener('load', load, false);
         setTimeout(function() {
-            loader.style.display = 'none'
+            loader.style.display = 'none';
             document.body.style.overflow = "auto";
         }, 500);
 
