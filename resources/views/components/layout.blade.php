@@ -27,8 +27,7 @@
         <h1 id=title> AYUDA POR FAVOR </h1>
         @auth
             <div class="grid grid-cols-2 m-0">
-                <a href="/register" class="w-full">
-                    <i class="fa-solid fa-user-plus mr-2"></i> Welcome, {{ auth()->user()->name }} </a>
+                <a href="/register" class="w-full">Welcome, {{ auth()->user()->name }} </a>
 
                 <form method="POST" action="/logout" class="relative self-center">
                     @csrf
@@ -38,10 +37,9 @@
             </div>
         @else
             <div class="grid grid-cols-2 m-0">
-                <a href="/register" class="w-full">
-                    <i class="fa-solid fa-user-plus mr-2"></i> Register </a>
                 <a href="/login" class="w-full">
-                    <i class="fa-solid fa-arrow-right-to-bracket mr-2"></i> Login </a>
+                    <i class="fa-solid fa-user mr-2"></i>Login </a>
+                    <a href="/register" class="w-full">Register </a>
             </div>
         @endauth
     </nav>
@@ -55,7 +53,7 @@
     <!-- navegacion -->
 
     <nav class="main-nav">
-        <a>INICIO </a>
+        <a href="/">INICIO </a>
         <a>DESARROLLO</a>
         <a>FINAL</a>
     </nav>

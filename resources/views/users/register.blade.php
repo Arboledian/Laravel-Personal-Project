@@ -4,7 +4,7 @@
 
     <div class="login ">
         {{-- Header Texto --}}
-        <header class="text-center border border-gray-200 rounded mt-10 bg-orange-700">
+        <header class="text-center border border-gray-200 rounded mt-10 bg-orange-700 px-2">
             <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
             <p class="mb-4">Create an account to have an account!</p>
         </header>
