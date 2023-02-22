@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/css/sesion.css" />
 <x-layout>
-    <title>Laravel </title>
+    <title>Laravel - register </title>
+    @include('/partials._loadingscreen')
 
     <div class="login ">
         {{-- Header Texto --}}

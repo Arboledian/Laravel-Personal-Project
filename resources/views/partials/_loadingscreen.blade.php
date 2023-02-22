@@ -11,7 +11,7 @@
 <script>
     //en resumen este script agarra el documento con la id proloader y le quita sus propiedades css
     // y devuelve la scrollbar a su valor por defecto
-    //el cambio se efectua cuando la pagina deja de cargar o pasa el tiempo, lo que pase mas tarde
+    //el cambio se efectua cuando la pagina deja de cargar y pasa el tiempo
     var loader = document.getElementById("preloader");
 
     window.addEventListener('load', function(load) {
@@ -19,7 +19,7 @@
         setTimeout(function() {
             loader.style.display = 'none';
             document.body.style.overflow = "auto";
-        }, 500);
+        }, 200);
 
     }, false);
 </script>

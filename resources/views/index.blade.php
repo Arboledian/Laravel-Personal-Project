@@ -1,10 +1,8 @@
 <x-layout>
     <head>
-        <title>Laravel Index</title>
-        <script defer src="/js/indexstyle.js"></script>
-        <script defer src="/js/scrollable.js"></script>
-        <link rel="stylesheet" href="/css/vcard.css" />
+        <title>Laravel - Index</title>
     </head>
+    @include('/partials._loadingscreen')
 
     @include('/partials._search')
 
@@ -27,10 +25,8 @@
 
         {{-- foreach es la tipica funcion para buscar datos en un array --}}
         @foreach ($vtubers as $vtuber)
-            {{-- el siguiente section correspone al como se muestra y que info se muestra
-            es posible separar esto en un componente aparte, en caso de que la pagina
-            sea muy grande es bueno tenerlo en consideracion aunque no es el caso --}}
-
+        {{-- se usa la plantilla vcard para mostar la informacion, ademas se use :vtuber para poder pasar
+            la información de la variable $vtuber --}}
             <x-vcard :vtuber="$vtuber"/>
         @endforeach
     @else

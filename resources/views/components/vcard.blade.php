@@ -1,9 +1,13 @@
 @props(['vtuber'])
+<link rel="stylesheet" href="/css/vcard.css" />
+<script defer src="/js/scrollable.js"></script>
+<script defer src="/js/indexstyle.js"></script>
+
 <section>
     <div class="v-contenedor hiddeable">
         <img class="image" src="/images/{{ $vtuber->image }}.jpg">
         <div class="v-content">
-            <h1 class="v-name"> {{ $vtuber->name }}</h1>
+            <h1 class="v-name hover:text-red-400"><a href="/character/{{$vtuber->id}} "class="px-2 py-1"> {{ $vtuber->name }}</a></h1>
             <div class="v-info">
                 <h2 class="v-nickname">Nicknames: {{ $vtuber->nickname }}</h2>
                 <h2 class="v-fanname">Fanname: {{ $vtuber->fanname }} </h2>

@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="/css/sesion.css" />
 <x-layout>
+    <title>Laravel - Login </title>
+    @include('/partials._loadingscreen')
+
     <div class="login">
 
         <header class="text-center border border-gray-200 rounded mt-10 bg-orange-700 px-2">
