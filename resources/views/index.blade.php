@@ -1,8 +1,11 @@
 <x-layout>
     <head>
+        {{-- por alguna razón tengo que poner el script acá tambien por consistencia --}}
+        <script defer src="/js/indexstyle.js"></script>
         <title>Laravel - Index</title>
     </head>
     @include('/partials._loadingscreen')
+
 
     @include('/partials._search')
 
@@ -25,12 +28,12 @@
 
         {{-- foreach es la tipica funcion para buscar datos en un array --}}
         @foreach ($vtubers as $vtuber)
-        {{-- se usa la plantilla vcard para mostar la informacion, ademas se use :vtuber para poder pasar
+            {{-- se usa la plantilla vcard para mostar la informacion, ademas se use :vtuber para poder pasar
             la información de la variable $vtuber --}}
-            <x-vcard :vtuber="$vtuber"/>
+            <x-vcard :vtuber="$vtuber" />
         @endforeach
     @else
-        <h1 class="text-5xl font-serif m-20 p-20"> No data to show</h1>
+        <h1 class="text-5xl font-serif m-20 p-20"> No match found</h1>
     @endunless
 
     </body>

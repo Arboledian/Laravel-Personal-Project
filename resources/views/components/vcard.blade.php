@@ -1,7 +1,9 @@
 @props(['vtuber'])
-<link rel="stylesheet" href="/css/vcard.css" />
-<script defer src="/js/scrollable.js"></script>
-<script defer src="/js/indexstyle.js"></script>
+<head>
+    <link rel="stylesheet" href="/css/vcard.css" />
+    <script defer src="/js/indexstyle.js"></script>
+    <script defer src="/js/scrollable.js"></script>
+</head>
 
 <section>
     <div class="v-contenedor hiddeable">
