@@ -2,7 +2,7 @@ body{
     overflow: hidden;
 }
 #preloader{
-    background-color: rgb(30, 30, 30);
+    background-color: rgb( 13, 4, 22);
     min-width: 100vw;
     min-height: 110vh;
     z-index: 100;

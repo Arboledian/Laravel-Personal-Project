@@ -13,8 +13,8 @@ class Vtuber extends Model
     public function scopeFilter($query, array $filters){
         if($filters['search'] ?? false){
             //comando con formato SQL
-            $query->where('company', 'like','%' . request('company') . '%')
-            ->orWhere('name', 'like','%' . request('name') . '%');
+            $query->where('company', 'like','%' . request('search') . '%')
+            ->orWhere('name', 'like','%' . request('search') . '%');
         }
 
 
