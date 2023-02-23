@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Vtuber;
+use App\Models\Comments;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -41,7 +42,7 @@ class DatabaseSeeder extends Seeder
             'nickname' => 'Meimei Moom',
             'fanname' => 'Hoomans',
             'oshimark' =>'🪶',
-            'company'=> 'HoliliveEN Council',
+            'company'=> 'HololiveEN Council',
             'image'=> 'mumei1',
             'clip'=> 'https://www.youtube.com/embed/Q8A_GFiNs1U',
             'description' => 'Nanashi Mumei como ctm puede existir wn, esta wna o es la mejor actriz del mundo o es weona pero no entiendo wn, es una wea rara no tengo mucho mas que decir porque literalmente no entiendo si es o se hace',

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vtuber;
+use App\Models\Comments;
 use Illuminate\Http\Request;
 
 class VtuberController extends Controller
@@ -26,7 +27,8 @@ class VtuberController extends Controller
     public function displayCharacter(Vtuber $vtuber)
     {
         return view('character',[
-            'vtuber' => $vtuber
+            'vtuber' => $vtuber,
+            'comments'=> Comments::latest()->get()
         ]);
 
     }

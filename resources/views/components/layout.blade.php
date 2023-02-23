@@ -53,8 +53,8 @@
 
     <nav class="main-nav">
         <a href="/">INICIO </a>
-        <a>DESARROLLO</a>
-        <a>FINAL</a>
+        <a>DESARROLLO (sin uso)</a>
+        <a>FINAL (sin uso)</a>
     </nav>
 
     {{-- View Output --}}

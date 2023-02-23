@@ -5,8 +5,6 @@
         <title>Laravel - Index</title>
     </head>
     @include('/partials._loadingscreen')
-
-
     @include('/partials._search')
 
     {{-- info de la pagina --}}

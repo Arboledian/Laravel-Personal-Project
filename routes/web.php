@@ -4,6 +4,7 @@ use App\Models\Vtuber;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VtuberController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +27,11 @@ Route::get('/', [VtuberController::class, 'index']);
 
 Route::get('/character/{vtuber}', [VtuberController::class, 'displayCharacter']);
 
+Route::post('/comments.store', [CommentController::class, 'store']);
 //middleware es una directiva de requerimiento, guest requiere que una sesion de invitado para poder acceder
 //mientras que auth requiere una sesion de usuario válida para ingresar
 Route::get('/register', [UserController::class, 'register'])->middleware('guest');
+
 
 
 /* Create New User
