@@ -26,6 +26,8 @@ Route::get('/', function () {
 Route::get('/', [VtuberController::class, 'index']);
 
 Route::get('/character/{vtuber}', [VtuberController::class, 'displayCharacter']);
+Route::get('/character/{vtuber}/edit', [VtuberController::class, 'editCharacter']);
+Route::get('/character/{vtuber}/store', [VtuberController::class, 'storeCharacter']);
 
 Route::post('/comments.store', [CommentController::class, 'store']);
 //middleware es una directiva de requerimiento, guest requiere que una sesion de invitado para poder acceder

@@ -32,6 +32,18 @@ class VtuberController extends Controller
             'votes' => Votes::all()
         ]);
     }
+    public function editCharacter(Vtuber $vtuber)
+    {
+        return view('vedit',[
+            'vtuber' => $vtuber,
+        ]);
+    }
+    public function storeCharacter(Vtuber $vtuber)
+    {
+        return view('character',[
+            'vtuber' => $vtuber,
+        ]);
+    }
 
 
 }

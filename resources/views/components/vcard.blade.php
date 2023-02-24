@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
+    {{ $slot }}
     <div class="space">
     </div>
 </section>

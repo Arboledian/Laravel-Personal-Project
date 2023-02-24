@@ -9,7 +9,11 @@
     <div class="line space"></div>
     @if ($vtuber)
     <x-comments :vtuber="$vtuber">
-        <x-vcard :vtuber="$vtuber"/>
+        <x-vcard :vtuber="$vtuber">
+            <div class="editar">
+                <a href="/character/{{$vtuber->id}}/edit">Edit</a>
+            </div>
+        </x-vcard>
     </x-comments>
     @else
         <h1 class="text-5xl font-serif m-20 p-20"> No data to show</h1>
