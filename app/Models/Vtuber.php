@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Comments;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Vtuber extends Model
 {
@@ -16,8 +17,8 @@ class Vtuber extends Model
             $query->where('company', 'like','%' . request('search') . '%')
             ->orWhere('name', 'like','%' . request('search') . '%');
         }
-
-
-
+    }
+    public function comments(){
+        return $this->hasMany(Comments::class);
     }
 }

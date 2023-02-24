@@ -1,15 +1,15 @@
-@props(['comments'])
+@props(['vtuber'])
 <link rel="stylesheet" href="/css/comments.css" />
 <div class="border border-red-400 post-comments">
     {{ $slot }}
     {{-- diferenciar vista auth y guest --}}
     @auth
-
-
         <!--post comment box -->
         <form method="POST" action="/comments.store">
             @csrf
-            <div class="post-exterior">
+            <div class="post-exterior form-group">
+                <input type="hidden" name="vtuber_id" value="{{ $vtuber->id }}">
+                <input type="hidden" name="user_id" value="{{ Auth::Id() }}">
                 <div class="post-box">
                     <div class="text-space form-group">
                         <textarea name="content" class="post-input form-control" required placeholder="post a comment"></textarea>
@@ -18,11 +18,6 @@
                         <button type="submit" class="btn btn-primary post-button">
                             Submit
                         </button>
-                        {{--
-                            <button class="post-button">
-                                Cancel
-                            </button>
-                            --}}
                     </div>
                 </div>
             </div>
@@ -35,9 +30,10 @@
     @endauth
 
     <!--comentarios-->
-
-
-
+    @foreach ($vtuber->comments as $comment)
+        <p>{{ $comment->content }}</p>
+        <p>Posted by {{ $comment->user->name }}</p>
+    @endforeach
 
     <div id="first" class="comment-box">
         <div class="primero mb-0">

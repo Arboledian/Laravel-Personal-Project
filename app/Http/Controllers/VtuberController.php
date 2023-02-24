@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Votes;
 use App\Models\Vtuber;
 use App\Models\Comments;
 use Illuminate\Http\Request;
@@ -28,8 +29,9 @@ class VtuberController extends Controller
     {
         return view('character',[
             'vtuber' => $vtuber,
-            'comments'=> Comments::latest()->get()
+            'votes' => Votes::all()
         ]);
-
     }
+
+
 }

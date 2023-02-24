@@ -8,12 +8,8 @@
     {{-- una lina otra vez --}}
     <div class="line space"></div>
     @if ($vtuber)
-    <x-comments>
-        <x-vcard :vtuber="$vtuber" />
-
-        {{--
-            haceerlo como hardcode y luego pasarlo a la template
-            --}}
+    <x-comments :vtuber="$vtuber">
+        <x-vcard :vtuber="$vtuber"/>
     </x-comments>
     @else
         <h1 class="text-5xl font-serif m-20 p-20"> No data to show</h1>

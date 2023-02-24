@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class VoteController extends Controller
 {
-    public function upVote(Vtuber $vtuber)
+   /* public function upVote(Vtuber $vtuber)
     {
         $isVoted = Votes::where('user_id', auth()->id())->first();
 
@@ -53,5 +53,5 @@ class VoteController extends Controller
             return redirect()->back();
         }
     }
-    //
+    //*/
 }
